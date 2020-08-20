@@ -17,7 +17,9 @@ export default function App() {
   const [isAddMode, setIsAddMode] = useState(false);
 
   const addGoalHandler = (newGoal) => {
-    //console.log(enteredGoal);
+    if (newGoal.length === 0) {
+      return;
+    }
     //the code below is NOT GUARANTEE
     //setCourseGoals([...courseGoals, enteredGoal]);
 
